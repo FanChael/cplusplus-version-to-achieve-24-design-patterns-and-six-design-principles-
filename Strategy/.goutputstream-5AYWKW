@@ -1,0 +1,7 @@
+#include "strtegy.h"
+#include <iostream>
+using namespace std;
+
+void Backdoor::operate()
+{
+    cout << "
