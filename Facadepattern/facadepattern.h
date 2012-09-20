@@ -53,7 +53,7 @@ private:
 	LettersProcess  * ltt;
 };
 
-/* 原来一开是用静态 static LettersProcess ltt; 但是没必要！而且在类中定义对象，需要将private放在前面，不是找不到！
+/* 原来一开是用静态 static LettersProcess ltt; 但是没必要！
  * 这编译器！！！
 class Test
 {
