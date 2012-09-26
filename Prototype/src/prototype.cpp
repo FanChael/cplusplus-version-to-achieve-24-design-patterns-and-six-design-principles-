@@ -153,13 +153,14 @@ int main()
 		char * abc = c.getStr();
 
 		Mail * pMail = mal.getClone();	/// < 得到clone版本，这样再执行多线程操作才不会影响结果！省去了我们自己控制线程pthread_create！
+		cout << "address1 ---------- "<< pMail << endl;	/// < 每次地址都不同，因此成功拷贝!
 		pMail->setRec(abc);
 		delete abc;
 		pMail->setAppe("xiaodou");
 		pMail->setTail("lego公司");
 
 		SendMail::sendMail(*pMail);
-		delete pMail;
+		delete pMail;	/// < 执行了delete之后，可能每次分配的地址都相同！所以每次你看到address结果都可能相同！
 	}
 
 
